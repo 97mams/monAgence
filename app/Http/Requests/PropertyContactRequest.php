@@ -22,11 +22,11 @@ class PropertyContactRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'firstname' => ['require', 'string', 'min:2'],
-            'lastname' => ['require', 'string', 'min:2'],
-            'phone' => ['require', 'string', 'min:10'],
-            'email' => ['require', 'email', 'min:4'],
-            'message' => ['require', 'string', 'min:4'],
+            'firstname' => ['required', 'string', 'min:2'],
+            'lastname' => ['required', 'string', 'min:2'],
+            'phone' => ['required', 'string', 'min:10'],
+            'email' => ['required', 'email', 'min:4'],
+            'message' => ['required', 'string', 'min:4'],
         ];
     }
 }
