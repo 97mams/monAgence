@@ -16,11 +16,15 @@
 
 <div class="container">
     <div class="row">
-        @foreach($properties as $property)
+        @forelse($properties as $property)
         <div class="col-3 mb-3">
             @include('property.card')
         </div>
-        @endforeach
+        @empty
+        <div class="col">
+            Aucun bien correspond à votre recherche.
+        </div>
+        @endforelse
     </div>
     {{ $properties->links() }}
 </div>
