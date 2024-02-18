@@ -8,7 +8,7 @@ $route = request()->route()->getName();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') | Mon agence</title>
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
     <style>
         @layer demo {
@@ -22,7 +22,7 @@ $route = request()->route()->getName();
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
         <div class="container">
-            <a class="navbar-brand" href="/">Blog</a>
+            <a class="navbar-brand" href="/">Agence</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

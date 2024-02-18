@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <h1>{{ $property->title }}</h1>
-    <h2>{{ $property->rooms }} pièce - {{ $property->surface }} m2</h2>
+    <h2>{{ $property->rooms }} pièces - {{ $property->surface }} m2</h2>
 
     <div class="text-primary fw-bold" style="font-size: 4rem;">
         {{ number_format($property->price, thousands_separator: ' ') }} Ar
@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-8">
                     <h2>Caractéristique</h2>
-                    <table class="table">
+                    <table class="table table-striped">
                         <tbody>
                             <tr>
                                 <td>Surface habita </td>
