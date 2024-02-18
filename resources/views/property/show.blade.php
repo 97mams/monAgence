@@ -30,6 +30,50 @@
                 <button class="btn btn-primary">Nous contacter</button>
             </div>
         </form>
+        <div class="mt-4">
+            <p>{!! nl2br($property->description) !!}</p>
+            <div class="row">
+                <div class="col-8">
+                    <h2>Caractéristique</h2>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Surface habita </td>
+                                <td>{{ $property->surface }}</td>
+                            </tr>
+                            <tr>
+                                <td>Pièce</td>
+                                <td>{{ $property->bedrooms }}</td>
+                            </tr>
+                            <tr>
+                                <td>Chambres</td>
+                                <td>{{ $property->rooms }}</td>
+                            </tr>
+                            <tr>
+                                <td>Etage</td>
+                                <td>{{ $property->floor ?: 'Rez de chaussé' }}</td>
+                            </tr>
+                            <tr>
+                                <td>Localisation</td>
+                                <td>
+                                    {{ $property->address }}
+                                    {{ $property->city }}
+                                    ({{ $property->postal_code }})
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-4">
+                    <h2>Spécificités</h2>
+                    <ul class="list-group">
+                        @foreach($property->options as $option)
+                        <li class="list-group-item">{{ $option->name }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
