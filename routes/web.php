@@ -22,7 +22,7 @@ $slugRegex = '[0-9a-z\-]+';
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/biens', [App\Http\Controllers\PropertyController::class, 'index'])->name('property.index');
-Route::post('/biens/{slug}/{property}', [App\Http\Controllers\PropertyController::class, 'show'])->name('property.show')->where([
+Route::get('/biens/{slug}-{property}', [App\Http\Controllers\PropertyController::class, 'show'])->name('property.show')->where([
     'property' => $idRegex,
     'slug' => $slugRegex
 ]);
