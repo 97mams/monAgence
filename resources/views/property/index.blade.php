@@ -3,6 +3,7 @@
 @section('title', 'Tous nos biens')
 @section('content')
 <div class="bg-light p-5 mb-5 text-center">
+
     <form action="" method="get" class="container d-flex gap-2">
         <input type="number" placeholder="Surface minimum" name="surface" class="form-control" value="{{ $input['surface'] ?? ''}}">
         <input type="number" placeholder="Nombre de piece minimum" name="rooms" class="form-control" value="{{ $input['rooms']  ?? ''}}">

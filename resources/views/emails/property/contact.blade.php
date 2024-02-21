@@ -8,6 +8,6 @@
     - Téléphone : {{ $data['phone'] }}
     - Email : {{ $data['email'] }}
 
-    **Message :** <br>
+    **Message :** <br />
     {{ $data['message'] }}
 </x-mail::message>

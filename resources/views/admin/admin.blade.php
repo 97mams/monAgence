@@ -42,6 +42,7 @@ $route = request()->route()->getName();
         </div>
     </nav>
     <div class="container">
+        @include('shared.flash')
         @yield('content')
     </div>
     <script>
