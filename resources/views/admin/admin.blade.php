@@ -13,8 +13,8 @@ $route = request()->route()->getName();
     <link rel="stylesheet" href="{{ asset('tom-select.css') }}">
     <script src="{{ asset('tom-select.min.js') }}"></script>
     <style>
-        @layer demo {
-            bottom {
+        @layer reset {
+            button {
                 all: unset;
             }
         }
@@ -36,7 +36,16 @@ $route = request()->route()->getName();
                     <li class="nav-item">
                         <a href="{{ route('admin.option.index') }}" @class(["nav-link", "active"=> str_contains($route, 'option.')])>Gérer les options</a>
                     </li>
-                </ul>
+                    @auth
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button class="nav-link">Se déconnecter</button>
+                        </form>
+                    </li>
+                    @endauth
+
 
             </div>
         </div>
