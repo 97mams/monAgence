@@ -1,5 +1,6 @@
 <div class="card">
     <div class="card-body">
+        <img src="{{ url('property.jpeg') }}" alt="property" class="card-img">
         <h5 class="card-title">
             <a href="{{ route('property.show', ['slug' => $property->getSlug(), 'property' => $property]) }}">{{ $property->title }}</a>
         </h5>
