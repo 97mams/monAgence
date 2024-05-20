@@ -28,3 +28,7 @@ Mon Agence is a project to practice Laravel 10, it is a list of owners for the c
   ```
   php migrate:fresh --seed
   ```
+- Run server:
+  ```
+  php artisan serve
+  ```  
