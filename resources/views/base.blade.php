@@ -31,9 +31,6 @@ $route = request()->route()->getName();
                     <li class="nav-item">
                         <a href="{{ route('property.index') }}" @class(['nav-link', 'active'=> str_contains($route, 'property.')])>Biens</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" @class(["nav-link"])>Gérer les options</a>
-                    </li>
                 </ul>
 
             </div>
