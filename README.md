@@ -2,6 +2,8 @@
  
 Mon Agence is a project to practice Laravel 10, it is a list of owners for the customers page and a search bar to filter the properties, an adim page to administer the properties
 
+![App screenshot](./public/app.png)
+
 ## Installation:
 
 - Clone the repository from Github:
@@ -31,4 +33,4 @@ Mon Agence is a project to practice Laravel 10, it is a list of owners for the c
 - Run server:
   ```
   php artisan serve
-  ```  
+  ```
